@@ -1,4 +1,6 @@
-Lobster Binance OS is not a single-feature assistant, but a unified intent control and task orchestration layer for the Binance ecosystem.
+# Lobster Binance OS
+
+Lobster Binance OS is an ecosystem-level intent router and task orchestration agent for Binance.
 
 It does not merely summarize announcements.  
 It reorganizes fragmented activities, assets, tasks, risks, and execution paths into a unified action view based on the user's goal.
@@ -16,11 +18,10 @@ It reorganizes fragmented activities, assets, tasks, risks, and execution paths 
 ```bash
 pip install -r requirements.txt
 uvicorn app:app --reload
-Example API
+Open Swagger UI: http://127.0.0.1:8000/docs
 
-POST /analyze
-json
-{
+Example API
+POST /analyze{
   "user_goal": "I only want to do the most worthwhile low-risk thing on Binance today",
   "assets": [
     {
