@@ -1,0 +1,23 @@
+{
+  "user_goal": "Check whether I should move this USDT from current path to a new campaign",
+  "assets": [
+    {
+      "symbol": "USDT",
+      "amount": 300,
+      "locked": false,
+      "current_path": "launchpool"
+    }
+  ],
+  "opportunities": [
+    {
+      "id": "new_campaign",
+      "name": "New Earn Campaign",
+      "type": "earn",
+      "required_asset": "USDT",
+      "min_amount": 200,
+      "reward_score": 70,
+      "risk_score": 15,
+      "time_sensitive": true
+    }
+  ]
+}
