@@ -1,53 +1,67 @@
-# Lobster Binance OS
+Lobster Binance OS
 
 A unified intent control and task orchestration layer for the Binance ecosystem.
 
 Lobster Binance OS is an ecosystem-level intent router and task orchestration agent for Binance.
 
-It does not merely summarize announcements.  
+It does not merely summarize announcements.
 It reorganizes fragmented activities, assets, tasks, risks, and execution paths into a unified action view based on the user's goal.
 
-## Core Modules
+Core Modules
 
-- Opportunity Scanner
-- Asset & Eligibility Mapper
-- Conflict Resolver
-- Priority Engine
-- Action Checklist Generator
+Opportunity Scanner
 
-## What It Solves
+Asset & Eligibility Mapper
 
-Binance does not lack products, campaigns, or opportunities.  
+Conflict Resolver
+
+Priority Engine
+
+Action Checklist Generator
+
+What It Solves
+
+Binance does not lack products, campaigns, or opportunities.
 What users often lack is a unified layer that tells them what to do now, in what order, and what not to touch.
 
 Lobster Binance OS addresses:
 
-- Fragmented ecosystem entry points
-- Conflicts between assets and opportunity paths
-- Poor action prioritization across campaigns, Earn, Launchpool, and tasks
-- High decision cost for ordinary users
-- Lack of a unified action view based on the user's real goal
+Fragmented ecosystem entry points
 
-## Workflow
+Conflicts between assets and opportunity paths
 
-1. Parse the user's goal, link, text, screenshot, or account context
-2. Scan current opportunities in the ecosystem
-3. Map assets, eligibility, and path constraints
-4. Detect conflicts between actions, assets, and existing paths
-5. Rank actions based on user goal, risk, efficiency, and timing
-6. Generate a final action checklist
+Poor action prioritization across campaigns, Earn, Launchpool, and tasks
 
-## Run
+High decision cost for ordinary users
 
-```bash
+Lack of a unified action view based on the user's real goal
+
+Workflow
+
+Parse the user's goal, link, text, screenshot, or account context
+
+Scan current opportunities in the ecosystem
+
+Map assets, eligibility, and path constraints
+
+Detect conflicts between actions, assets, and existing paths
+
+Rank actions based on user goal, risk, efficiency, and timing
+
+Generate a final action checklist
+
+Run
 pip install -r requirements.txt
 uvicorn app:app --reload
-Local API docs will be available at:
 
-- `http://127.0.0.1:8000/docs`
+After running locally, open:
+
+Swagger UI: http://127.0.0.1:8000/docs
+
 Example API
 
 POST /analyze
+
 {
   "user_goal": "I only want to do the most worthwhile low-risk thing on Binance today",
   "assets": [
@@ -97,3 +111,61 @@ POST /analyze
     }
   ]
 }
+Example Output Logic
+
+The system is designed to return:
+
+User goal recognition
+
+Best current action
+
+Second-best action
+
+Not recommended actions
+
+Asset restrictions
+
+Conflict analysis
+
+Final action checklist
+
+Repository Structure
+.
+├── engine/
+│   ├── scanner.py
+│   ├── mapper.py
+│   ├── resolver.py
+│   ├── priority.py
+│   └── checklist.py
+├── examples/
+│   ├── scenario_1.json
+│   ├── scenario_2.json
+│   └── scenario_3.json
+├── app.py
+├── main.py
+├── models.py
+├── requirements.txt
+└── sample_data.py
+Demo Scenarios
+Scenario 1
+
+A goal-driven ecosystem orchestration case:
+“I only want to do the most worthwhile low-risk thing on Binance today.”
+
+Scenario 2
+
+An asset path conflict case:
+“This USDT may already be in an existing path. Should I move it to a new campaign?”
+
+Scenario 3
+
+A daily action prioritization case:
+“Based on my account, tell me what I should do first today and what not to do.”
+
+Notes
+
+This repository is a prototype built for demonstration and competition submission.
+It focuses on orchestration logic, prioritization, conflict detection, and action checklist generation.
+
+It is not a blind auto-trading bot, and it does not assume unrestricted account control.
+Its purpose is to provide a unified action view for users navigating a fragmented Binance ecosystem.
