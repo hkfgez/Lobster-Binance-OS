@@ -55,11 +55,13 @@ Generate a final action checklist
 ```bash
 pip install -r requirements.txt
 uvicorn app:app --reload
+Local API docs will be available at:
 
+http://127.0.0.1:8000/docs
 Example API
 
 POST /analyze
-{
+  {
   "user_goal": "I only want to do the most worthwhile low-risk thing on Binance today",
   "assets": [
     {
