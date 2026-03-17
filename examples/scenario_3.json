@@ -1,0 +1,39 @@
+{
+  "user_goal": "Based on my account, tell me what I should do first today and what not to do",
+  "assets": [
+    {
+      "symbol": "USDT",
+      "amount": 180,
+      "locked": false,
+      "current_path": "flexible_earn"
+    },
+    {
+      "symbol": "FDUSD",
+      "amount": 80,
+      "locked": false,
+      "current_path": null
+    }
+  ],
+  "opportunities": [
+    {
+      "id": "spot_challenge",
+      "name": "Spot Trading Challenge",
+      "type": "trading_competition",
+      "required_asset": "USDT",
+      "min_amount": 150,
+      "reward_score": 80,
+      "risk_score": 65,
+      "time_sensitive": true
+    },
+    {
+      "id": "launchpool_beta",
+      "name": "Launchpool Beta",
+      "type": "launchpool",
+      "required_asset": "USDT",
+      "min_amount": 100,
+      "reward_score": 75,
+      "risk_score": 20,
+      "time_sensitive": true
+    }
+  ]
+}
