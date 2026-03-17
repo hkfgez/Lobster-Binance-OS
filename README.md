@@ -50,18 +50,15 @@ Rank actions based on user goal, risk, efficiency, and timing
 
 Generate a final action checklist
 
-Run
+## Run
+
+```bash
 pip install -r requirements.txt
 uvicorn app:app --reload
-
-After running locally, open:
-
-Swagger UI: http://127.0.0.1:8000/docs
 
 Example API
 
 POST /analyze
-
 {
   "user_goal": "I only want to do the most worthwhile low-risk thing on Binance today",
   "assets": [
